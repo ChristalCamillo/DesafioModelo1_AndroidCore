@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="size_96">96dp</dimen>
+    <dimen name="margem_16">16dp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="size_50">50dp</dimen>
+    <dimen name="margem_8">8dp</dimen>
+    <dimen name="size_40">40dp</dimen>
+    <dimen name="size_80">80dp</dimen>
+</resources>

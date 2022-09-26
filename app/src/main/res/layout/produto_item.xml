@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvItem"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCarrinho"
+            android:layout_width="@dimen/size_50"
+            android:layout_height="@dimen/size_50"
+            android:layout_marginLeft="@dimen/margem_8"
+            android:layout_marginTop="@dimen/margem_8"
+            android:layout_marginRight="@dimen/margem_16"
+            android:layout_marginBottom="@dimen/margem_8"
+            android:contentDescription="@string/descicao_img_carrinho"
+            android:src="@drawable/carrinho"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvQnt_e_NomeProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margem_16"
+            android:text="Qnt_e_NomeProduto"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/imgCarrinho"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCarrinho"
+            app:layout_constraintTop_toTopOf="@id/imgCarrinho" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

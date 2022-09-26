@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_escuro"
+    tools:context="com.example.simcity_saojoao.splashActivity.SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_96"
+        android:layout_margin="@dimen/margem_16"
+        android:src="@drawable/balao"
+        android:contentDescription="@string/descricao_img_bandeirinhas"
+        app:layout_constraintBottom_toTopOf="@id/tvNomeApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNomeApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:text="@string/nomeApp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

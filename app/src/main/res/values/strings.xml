@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SimCity Sao Joao</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="descricao_img_bandeirinhas">varal de bandeirinhas coloridas estilo festa junina</string>
+    <string name="nomeApp">SimCity São João</string>
+    <string name="textApp">Festas juninas, é algo muito bom! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para a sua festa junina de maneira fácil e simples, só cadastrar os produtos da sua receita e se divertir!</string>
+    <string name="ir_para_produtos">ir para produtos</string>
+    <string name="produtos">Produtos</string>
+    <string name="text_valor_total">valor total</string>
+    <string name="text_ver_produtos">ver produtos</string>
+    <string name="text_cadastrar_novo_produto">cadastrar novo produto</string>
+    <string name="text_receita">receita</string>
+    <string name="text_valor_un_produto">valor unitário do produto</string>
+    <string name="text_qnt_produto">quantidade de produto</string>
+    <string name="text_nome_do_produto">nome do produto</string>
+    <string name="text_cadastro_produtos">Cadastro de produtos</string>
+    <string name="descicao_img_carrinho">carrinho vermelho de supermercado</string>
+    <string name="text_produtos_cadastrados">Produtos Cadastrados</string>
+    <string name="text_valor_unitario">valor unitário</string>
+    <string name="text_quantidade">quantidade</string>
+</resources>

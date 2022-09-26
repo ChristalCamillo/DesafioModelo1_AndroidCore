@@ -1,0 +1,109 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.simcity_saojoao.cadastroProdutos.fragments.CadastroProdutosFragment">
+
+    <TextView
+        android:id="@+id/tvTituloCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:text="@string/text_cadastro_produtos"
+        android:textSize="@dimen/font_12"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/etNomeProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:hint="@string/text_nome_do_produto"
+        android:inputType="text"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toTopOf="@id/etQntProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloCadastro" />
+
+    <EditText
+        android:id="@+id/etQntProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:hint="@string/text_qnt_produto"
+        android:inputType="number"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toTopOf="@id/etValorProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNomeProduto" />
+
+    <EditText
+        android:id="@+id/etValorProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:hint="@string/text_valor_un_produto"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toTopOf="@id/etReceita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etQntProduto" />
+
+    <EditText
+        android:id="@+id/etReceita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:layout_marginBottom="@dimen/margem_16"
+        android:hint="@string/text_receita"
+        android:inputType="text"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toTopOf="@id/btnCadastrarNovoProduto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etValorProduto" />
+
+    <Button
+        android:id="@+id/btnCadastrarNovoProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginTop="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:backgroundTint="@color/vermelho"
+        android:text="@string/text_cadastrar_novo_produto"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/btnVerProdutos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etReceita" />
+
+    <Button
+        android:id="@+id/btnVerProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margem_16"
+        android:layout_marginTop="@dimen/margem_16"
+        android:layout_marginRight="@dimen/margem_16"
+        android:backgroundTint="@color/verde"
+        android:text="@string/text_ver_produtos"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCadastrarNovoProduto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
