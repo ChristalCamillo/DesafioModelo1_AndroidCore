@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.cadastroProdutos.fragments.adapter
+package com.example.simcity_saojoao.produtos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

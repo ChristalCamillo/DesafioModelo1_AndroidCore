@@ -1,0 +1,45 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navHostFragment"
+    tools:context="com.example.simcity_saojoao.homeActivity.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imgBandeirinhas"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_96"
+        android:layout_margin="@dimen/margem_16"
+        android:src="@drawable/balao"
+        android:contentDescription="@string/descricao_img_bandeirinhas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTextApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:text="@string/textApp"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toTopOf="@+id/btnIrProdutos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBandeirinhas" />
+
+    <Button
+        android:id="@+id/btnIrProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:backgroundTint="@color/vermelho"
+        android:text="@string/ir_para_produtos"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTextApp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

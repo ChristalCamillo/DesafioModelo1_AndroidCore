@@ -6,40 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.simcity_saojoao.homeActivity.MainActivity">
 
-    <ImageView
-        android:id="@+id/imgBandeirinhas"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/size_96"
-        android:layout_margin="@dimen/margem_16"
-        android:src="@drawable/balao"
-        android:contentDescription="@string/descricao_img_bandeirinhas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvTextApp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_16"
-        android:text="@string/textApp"
-        android:textAlignment="center"
-        android:textSize="@dimen/font_14"
-        app:layout_constraintBottom_toTopOf="@+id/btnIrProdutos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgBandeirinhas" />
-
-    <Button
-        android:id="@+id/btnIrProdutos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margem_16"
-        android:backgroundTint="@color/vermelho"
-        android:text="@string/ir_para_produtos"
-        android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTextApp" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

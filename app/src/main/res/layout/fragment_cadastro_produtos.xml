@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.simcity_saojoao.cadastroProdutos.fragments.CadastroProdutosFragment">
+    tools:context="com.example.simcity_saojoao.produtos.fragments.cadastro.CadastroProdutosFragment">
 
     <TextView
         android:id="@+id/tvTituloCadastro"

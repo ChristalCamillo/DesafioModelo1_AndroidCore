@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.cadastroProdutos.fragments
+package com.example.simcity_saojoao.produtos.fragments.lista
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.LISTA_KEY
 import com.example.PRODUTO_KEY
-import com.example.simcity_saojoao.cadastroProdutos.fragments.adapter.ProdutosAdapter
+import com.example.simcity_saojoao.homeActivity.MainActivity
+import com.example.simcity_saojoao.produtos.adapter.ProdutosAdapter
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentListaProdutosBinding
@@ -30,6 +31,9 @@ class ListaProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.produtos)
+
         recuperarLista()
     }
 

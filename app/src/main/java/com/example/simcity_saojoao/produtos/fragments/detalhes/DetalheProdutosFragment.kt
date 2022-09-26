@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.cadastroProdutos.fragments
+package com.example.simcity_saojoao.produtos.fragments.detalhes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.MSG_FAVORITADO
 import com.example.PRODUTO_KEY
+import com.example.simcity_saojoao.homeActivity.MainActivity
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentDetalheProdutosBinding
@@ -24,6 +25,9 @@ class DetalheProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.produtos)
+
         recuperarProduto()
         favoritarProduto()
     }

@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.cadastroProdutos.fragments
+package com.example.simcity_saojoao.produtos.fragments.cadastro
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.LISTA_KEY
 import com.example.MSG_PREENCHA_CAMPOS
 import com.example.MSG_PRODUTO_CADASTRADO
-import com.example.simcity_saojoao.cadastroProdutos.CadastroProdutosActivity
+import com.example.simcity_saojoao.homeActivity.MainActivity
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentCadastroProdutosBinding
@@ -23,6 +23,7 @@ class CadastroProdutosFragment : Fragment() {
     private lateinit var qnt: String
     private lateinit var valorUn: String
     private lateinit var receita: String
+
     private var listaNovaProduto = mutableListOf<Produto>()
 
     override fun onCreateView(
@@ -35,6 +36,9 @@ class CadastroProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.produtos)
+
         clicarBotaoCadastrarNovoProduto()
         clicarBotaoVerProdutos()
         recuperarlistaProdutos()
@@ -76,13 +80,25 @@ class CadastroProdutosFragment : Fragment() {
     }
 
     fun verificarCampos(): Boolean {
-        val context = context as CadastroProdutosActivity
-        return if (nome.isEmpty() || qnt.isEmpty() || valorUn.isEmpty() || receita.isEmpty()) {
-            Toast.makeText(context, MSG_PREENCHA_CAMPOS, Toast.LENGTH_LONG).show()
-            true
-        } else {
-            false
+        when {
+            nome.isEmpty() -> {
+                binding.etNomeProduto.error = MSG_PREENCHA_CAMPOS
+                return false
+            }
+            qnt.isEmpty() -> {
+                binding.etQntProduto.error = MSG_PREENCHA_CAMPOS
+                return false
+            }
+            valorUn.isEmpty() -> {
+                binding.etValorProduto.error = MSG_PREENCHA_CAMPOS
+                return false
+            }
+            receita.isEmpty() -> {
+                binding.etReceita.error = MSG_PREENCHA_CAMPOS
+                return false
+            }
         }
+        return true
     }
 
     private fun clicarBotaoVerProdutos() {
@@ -103,17 +119,8 @@ class CadastroProdutosFragment : Fragment() {
 
     private fun recuperarlistaProdutos() {
         val lista = arguments?.getParcelableArrayList<Produto>(LISTA_KEY)
-        if (lista != null) {
-            atualizarListaProdutos(lista)
-        }
-    }
-
-    fun atualizarListaProdutos(novaLista: ArrayList<Produto>) {
-        if (listaNovaProduto.size == 0) {
-            listaNovaProduto = novaLista
-        } else if (listaNovaProduto.containsAll(novaLista)) {
-        } else {
-            listaNovaProduto.addAll(novaLista)
+        lista?.let {
+            listaNovaProduto = it
         }
     }
 }
