@@ -10,7 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.LISTA_KEY
 import com.example.PRODUTO_KEY
-import com.example.simcity_saojoao.homeActivity.MainActivity
+import com.example.simcity_saojoao.home.MainActivity
 import com.example.simcity_saojoao.produtos.adapter.ProdutosAdapter
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R

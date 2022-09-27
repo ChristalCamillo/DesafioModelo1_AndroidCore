@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.MSG_FAVORITADO
-import com.example.PRODUTO_KEY
-import com.example.simcity_saojoao.homeActivity.MainActivity
+import com.example.*
+import com.example.simcity_saojoao.home.MainActivity
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentDetalheProdutosBinding
@@ -41,11 +40,8 @@ class DetalheProdutosFragment : Fragment() {
 
     private fun exibirDetalhes(produto: Produto) {
         binding.tvNomeProduto.text = produto.getNome()
-        val QUANTIDADE = "Quantidade: "
         binding.tvQuantidade.text = QUANTIDADE + produto.getQuantidade().toString()
-        val VALOR_UNIT = "Valor unitário: "
         binding.tvValorUnitario.text = VALOR_UNIT + produto.getValorUnit().toString()
-        val RECEITA = "Receita: "
         binding.tvReceita.text = RECEITA + produto.getReceita()
     }
 

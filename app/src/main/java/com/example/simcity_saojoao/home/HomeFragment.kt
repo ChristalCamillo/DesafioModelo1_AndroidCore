@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.homeActivity
+package com.example.simcity_saojoao.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_16"
-        android:text="NomeProduto"
+        android:text="@string/nomeproduto"
         android:textSize="@dimen/font_16"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imgCarrinho"
@@ -70,6 +70,7 @@
         android:layout_margin="@dimen/margem_16"
         android:src="@drawable/ic_favoritar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/content_description_coracao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

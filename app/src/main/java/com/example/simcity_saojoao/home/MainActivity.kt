@@ -1,4 +1,4 @@
-package com.example.simcity_saojoao.homeActivity
+package com.example.simcity_saojoao.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

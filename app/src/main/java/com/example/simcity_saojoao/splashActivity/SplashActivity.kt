@@ -3,7 +3,7 @@ package com.example.simcity_saojoao.splashActivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.simcity_saojoao.homeActivity.MainActivity
+import com.example.simcity_saojoao.home.MainActivity
 import com.example.simcitysaojoao.R
 import java.util.*
 

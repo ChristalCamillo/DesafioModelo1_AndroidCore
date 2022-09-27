@@ -11,7 +11,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.LISTA_KEY
 import com.example.MSG_PREENCHA_CAMPOS
 import com.example.MSG_PRODUTO_CADASTRADO
-import com.example.simcity_saojoao.homeActivity.MainActivity
+import com.example.simcity_saojoao.home.MainActivity
 import com.example.simcity_saojoao.model.Produto
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentCadastroProdutosBinding
@@ -36,15 +36,14 @@ class CadastroProdutosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         (activity as MainActivity).supportActionBar?.title = getString(R.string.produtos)
 
         clicarBotaoCadastrarNovoProduto()
         clicarBotaoVerProdutos()
-        recuperarlistaProdutos()
+        recuperarLista()
     }
 
-    private fun adicionarItemListaProdutos() {
+    private fun cadastrarProduto() {
         recuperarDados()
         if (!verificarCampos()) {
             val produto = Produto(
@@ -60,7 +59,7 @@ class CadastroProdutosFragment : Fragment() {
 
     private fun clicarBotaoCadastrarNovoProduto() {
         binding.btnCadastrarNovoProduto.setOnClickListener {
-            adicionarItemListaProdutos()
+            cadastrarProduto()
             limparCampos()
         }
     }
@@ -83,31 +82,31 @@ class CadastroProdutosFragment : Fragment() {
         when {
             nome.isEmpty() -> {
                 binding.etNomeProduto.error = MSG_PREENCHA_CAMPOS
-                return false
+                return true
             }
             qnt.isEmpty() -> {
                 binding.etQntProduto.error = MSG_PREENCHA_CAMPOS
-                return false
+                return true
             }
             valorUn.isEmpty() -> {
                 binding.etValorProduto.error = MSG_PREENCHA_CAMPOS
-                return false
+                return true
             }
             receita.isEmpty() -> {
                 binding.etReceita.error = MSG_PREENCHA_CAMPOS
-                return false
+                return true
             }
         }
-        return true
+        return false
     }
 
     private fun clicarBotaoVerProdutos() {
         binding.btnVerProdutos.setOnClickListener {
-            irParaListaCadastrados()
+            irParaLista()
         }
     }
 
-    private fun irParaListaCadastrados() {
+    private fun irParaLista() {
         NavHostFragment.findNavController(this).navigate(
             R.id.action_cadastroProdutosFragment_to_listaProdutosFragment, bundleListaNova()
         )
@@ -117,10 +116,19 @@ class CadastroProdutosFragment : Fragment() {
         return bundleOf(LISTA_KEY to listaNovaProduto)
     }
 
-    private fun recuperarlistaProdutos() {
+    private fun recuperarLista() {
         val lista = arguments?.getParcelableArrayList<Produto>(LISTA_KEY)
-        lista?.let {
-            listaNovaProduto = it
+        if (lista != null) {
+            atualizarLista(lista)
+        }
+    }
+
+    fun atualizarLista(novaLista: ArrayList<Produto>) {
+        if (listaNovaProduto.size == 0) {
+            listaNovaProduto = novaLista
+        } else if (listaNovaProduto.containsAll(novaLista)) {
+        } else {
+            listaNovaProduto.addAll(novaLista)
         }
     }
 }

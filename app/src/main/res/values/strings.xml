@@ -28,4 +28,6 @@
     <string name="text_produtos_cadastrados">Produtos Cadastrados</string>
     <string name="text_valor_unitario">valor unitário</string>
     <string name="text_quantidade">quantidade</string>
+    <string name="nomeproduto">NomeProduto</string>
+    <string name="content_description_coracao">coração vetorizado vermelho</string>
 </resources>

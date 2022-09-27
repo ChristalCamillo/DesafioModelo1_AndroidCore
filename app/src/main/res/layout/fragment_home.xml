@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navHostFragment"
-    tools:context="com.example.simcity_saojoao.homeActivity.HomeFragment">
+    tools:context="com.example.simcity_saojoao.home.HomeFragment">
 
     <ImageView
         android:id="@+id/imgBandeirinhas"
