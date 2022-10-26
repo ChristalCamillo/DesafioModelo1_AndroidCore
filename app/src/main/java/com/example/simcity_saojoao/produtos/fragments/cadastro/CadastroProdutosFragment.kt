@@ -37,10 +37,11 @@ class CadastroProdutosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).supportActionBar?.title = getString(R.string.produtos)
-
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         clicarBotaoCadastrarNovoProduto()
         clicarBotaoVerProdutos()
         recuperarLista()
+
     }
 
     private fun cadastrarProduto() {

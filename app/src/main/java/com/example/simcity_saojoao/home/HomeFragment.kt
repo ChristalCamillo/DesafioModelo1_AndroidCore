@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.NavHostFragment
 import com.example.simcitysaojoao.R
 import com.example.simcitysaojoao.databinding.FragmentHomeBinding
@@ -25,12 +27,15 @@ private lateinit var binding: FragmentHomeBinding
 
         (activity as MainActivity).supportActionBar?.title = getString(R.string.app_name)
 
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
         binding.btnIrProdutos.setOnClickListener {
             irParaCadastroProdutos()
         }
     }
 
     private fun irParaCadastroProdutos() {
+
         NavHostFragment.findNavController(this).navigate(
             R.id.action_homeFragment_to_cadastroProdutosFragment
         )
